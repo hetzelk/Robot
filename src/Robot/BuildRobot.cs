@@ -21,6 +21,7 @@ namespace Robot
             assembleBrain();
             assembleBody();
             assembleMainHardware();
+            Console.WriteLine();
         }
 
         public void assembleArms()

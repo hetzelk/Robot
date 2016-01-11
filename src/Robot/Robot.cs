@@ -22,22 +22,22 @@ namespace Robot
             battle = new Battle();
         }
 
-        public void RunRobots()
+        public void StartRobots()
         {
-            Random random = new Random();
-            int randomnumber = random.Next(1, 3);
-            
             BuildBody(name1);
             Console.WriteLine();
             
             BuildBody(name2);
             Console.WriteLine();
+        }
 
+        public void StartBattle()
+        {
             battle.BotName1 = name1;
             battle.BotName2 = name2;
-            battle.round1();
-            battle.round2();
-            battle.round3();
+            battle.Round1();
+            battle.Round2();
+            battle.Round3();
 
             Console.WriteLine("\n \nThe fight is over.");
             Console.ReadLine();

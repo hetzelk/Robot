@@ -33,7 +33,7 @@ namespace Robot
             set { name2 = value; }
         }
 
-        public void round1()
+        public void Round1()
         {
             Console.WriteLine("Round 1!");
             ChooseWeapon(name1, "sword");
@@ -49,7 +49,7 @@ namespace Robot
             Console.WriteLine(refresh);
         }
 
-        public void round2()
+        public void Round2()
         {
             Console.WriteLine("Round 2!");
             Console.WriteLine("{0}- {1}", name2, smack.SmackTalk(3));
@@ -60,7 +60,7 @@ namespace Robot
             Console.WriteLine(refresh);
         }
 
-        public void round3()
+        public void Round3()
         {
             Console.WriteLine("Round 3!");
             Console.WriteLine("{0}- {1}", name2, smack.SmackTalk(5));

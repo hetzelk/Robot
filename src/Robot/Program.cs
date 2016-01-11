@@ -9,8 +9,9 @@ namespace Robot
     {
         static void Main(string[] args)
         {
-            Robot robot = new Robot();
-            robot.RunRobots();
+            Robot robots = new Robot();
+            robots.StartRobots();
+            robots.StartBattle();
         }
     }
 }

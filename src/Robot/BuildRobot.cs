@@ -8,20 +8,30 @@ namespace Robot
 {
     public abstract class BuildRobot
     {
-        Arms armAdder = new Arms();
-        Legs legAdder = new Legs();
-        MotherBoard motherboardAdder = new MotherBoard();
-        Body bodyAdder = new Body();
-        Hardware hardwareAdder = new Hardware();
+        Arms armAdder;
+        Legs legAdder;
+        MotherBoard motherboardAdder;
+        Body bodyAdder;
+        Hardware hardwareAdder;
 
-        public void buildBody()
+        public BuildRobot()
         {
+            armAdder = new Arms();
+            legAdder = new Legs();
+            motherboardAdder = new MotherBoard();
+            bodyAdder = new Body();
+            hardwareAdder = new Hardware();
+        }
+        
+
+        public void BuildBody(string name)
+        {
+            Console.WriteLine("Assembling the robot {0}", name);
+            assembleBrain();
+            assembleMainHardware();
+            assembleBody();
             assembleArms();
             assembleLegs();
-            assembleBrain();
-            assembleBody();
-            assembleMainHardware();
-            Console.WriteLine();
         }
 
         public void assembleArms()

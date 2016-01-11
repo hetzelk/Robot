@@ -7,34 +7,38 @@ namespace Robot
 {
     public class Smack
     {
-        public string smacktalk1()
+        public string SmackTalk(int smackinput)
         {
+            if (smackinput == 1)
+            {
+                return "You couldn't hit the side of a barn";
+            }
+
+            if (smackinput == 2)
+            {
+                return "Look who hit the side of your face";
+            }
+
+            if (smackinput == 3)
+            {
+                return "You're weak";
+            }
+
+            if (smackinput == 4)
+            {
+                return "You should take that back, I won";
+            }
+
+            if (smackinput == 5)
+            {
+                return "You're gonna die";
+            }
+
+            if (smackinput == 6)
+            {
+                return "You just died. Shut up";
+            }
             return "You couldn't hit the side of a barn";
-        }
-
-        public string smacktalk2()
-        {
-            return "Look who hit the side of your face";
-        }
-
-        public string smacktalk3()
-        {
-            return "You're weak";
-        }
-
-        public string smacktalk4()
-        {
-            return "You should take that back, I won";
-        }
-
-        public string smacktalk5()
-        {
-            return "You've gonna die";
-        }
-
-        public string smacktalk6()
-        {
-            return "You just died, you. Shut up";
         }
     }
 }

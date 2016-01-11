@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Robot
 {
-    public class Legs
+    public class Legs : IPart
     {
         public int legs()
         {

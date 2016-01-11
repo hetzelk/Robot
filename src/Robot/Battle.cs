@@ -5,12 +5,21 @@ using System.Threading.Tasks;
 
 namespace Robot
 {
+
     public class Battle : Weapons
     {
+        string refresh;
         string name1;
         string name2;
+        Smack smack;
+        Weapons weapons;
 
-        Smack smackme = new Smack();
+        public Battle()
+        {
+            refresh = "\nRobots are 100 % refreshed \n";
+            smack = new Smack();
+            weapons = new Weapons();
+        }
 
         public string BotName1
         {
@@ -27,25 +36,38 @@ namespace Robot
         public void round1()
         {
             Console.WriteLine("Round 1!");
-            Console.WriteLine("'{0}'- {1}", name1, smackme.smacktalk1());
+            ChooseWeapon(name1, "sword");
+            ChooseWeapon(name1, "throwing star");
+            ChooseWeapon(name2, "gun");
+            ChooseWeapon(name2, "grenade");
+
+            Console.WriteLine("{0}- {1}", name1, smack.SmackTalk(1));
+            TakeAction(name1, "sword");
+            TakeAction(name2, "grenade");
             Console.WriteLine("{0} wins!!!", name2);
-            Console.WriteLine("'{0}'- {1}", name2, smackme.smacktalk2());
+            Console.WriteLine("{0}- {1}", name2, smack.SmackTalk(2));
+            Console.WriteLine(refresh);
         }
 
         public void round2()
         {
             Console.WriteLine("Round 2!");
-            Console.WriteLine("'{0}'- {1}", name2, smackme.smacktalk3());
+            Console.WriteLine("{0}- {1}", name2, smack.SmackTalk(3));
+            TakeAction(name2, "gun");
+            TakeAction(name1, "throwing star");
             Console.WriteLine("{0} wins!!!", name1);
-            Console.WriteLine("'{0}'- {1}", name1, smackme.smacktalk4());
+            Console.WriteLine("{0}- {1}", name1, smack.SmackTalk(4));
+            Console.WriteLine(refresh);
         }
 
         public void round3()
         {
             Console.WriteLine("Round 3!");
-            Console.WriteLine("'{0}'- {1}", name2, smackme.smacktalk5());
+            Console.WriteLine("{0}- {1}", name2, smack.SmackTalk(5));
+            TakeAction(name1, "sword");
+            TakeAction(name2, "gun");
             Console.WriteLine("{0} won!!!", name1);
-            Console.WriteLine("'{0}'- {1}", name1, smackme.smacktalk6());
+            Console.WriteLine("{0}- {1}", name1, smack.SmackTalk(6));
         }
     }
 }
